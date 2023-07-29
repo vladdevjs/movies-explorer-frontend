@@ -1,0 +1,116 @@
+.about-me {
+  padding: 110px 0 100px;
+  color: #fff;
+  background-color: #202020;
+}
+
+.about-me__personal-container {
+  margin-top: 66px;
+  display: flex;
+  justify-content: space-between;
+}
+.about-me__personal-info {
+  max-width: 600px;
+  text-align: left;
+}
+.about-me__personal-name {
+  margin: 0;
+  padding: 0;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 58px;
+  letter-spacing: -2px;
+}
+.about-me__personal-occupation {
+  margin: 18px 0 0;
+  padding: 0;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 20px;
+}
+.about-me__personal-description {
+  margin: 26px 0 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+.about-me__personal-github {
+  margin-top: 99px;
+  display: block;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.about-me__personal-photo {
+  width: 270px;
+  height: 327px;
+  display: block;
+  border-radius: 10px;
+}
+@media screen and (max-width: 1200px) {
+  .about-me {
+    padding: 90px 0;
+  }
+  .about-me__personal-name {
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -1.6px;
+  }
+  .about-me__personal-occupation {
+    margin-top: 16px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+  .about-me__personal-description {
+    margin-top: 20px;
+    max-width: 364px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+  .about-me__personal-photo {
+    width: 255px;
+    height: 307px;
+  }
+  .about-me__personal-github {
+    margin-top: 87px;
+  }
+  .about-me__personal-container {
+    gap: 49px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about-me {
+    padding: 70px 0;
+  }
+  .about-me__personal-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+    gap: 40px;
+  }
+  .about-me__personal-photo {
+    order: -1;
+    width: 292px;
+    height: 352px;
+  }
+  .about-me__personal-name {
+    font-size: 30px;
+    letter-spacing: -1.2px;
+  }
+  .about-me__personal-occupation {
+    font-size: 11px;
+    margin-top: 17px;
+  }
+  .about-me__personal-description {
+    margin-top: 18px;
+    font-size: 11px;
+  }
+  .about-me__personal-github {
+    margin-top: 40px;
+  }
+}

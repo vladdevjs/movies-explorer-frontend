@@ -1,0 +1,98 @@
+[
+  {
+    "image": "/dummy/images/1.jpg",
+    "name": "33 слова о дизайне",
+    "isSaved": true,
+    "duration": 110
+  },
+  {
+    "image": "/dummy/images/2.jpg",
+    "name": "33 слова о дизайне",
+    "isSaved": false,
+    "duration": 75
+  },
+  {
+    "image": "/dummy/images/3.jpg",
+    "name": "33 слова о дизайне",
+    "isSaved": true,
+    "duration": 140
+  },
+  {
+    "image": "/dummy/images/4.jpg",
+    "name": "33 слова о дизайне",
+    "isSaved": false,
+    "duration": 95
+  },
+  {
+    "image": "/dummy/images/5.jpg",
+    "name": "33 слова о дизайне",
+    "isSaved": true,
+    "duration": 120
+  },
+  {
+    "image": "/dummy/images/6.jpg",
+    "name": "33 слова о дизайне",
+    "isSaved": false,
+    "duration": 160
+  },
+  {
+    "image": "/dummy/images/7.jpg",
+    "name": "33 слова о дизайне",
+    "isSaved": true,
+    "duration": 85
+  },
+  {
+    "image": "/dummy/images/8.jpg",
+    "name": "33 слова о дизайне",
+    "isSaved": false,
+    "duration": 130
+  },
+  {
+    "image": "/dummy/images/9.jpg",
+    "name": "33 слова о дизайне",
+    "isSaved": true,
+    "duration": 100
+  },
+  {
+    "image": "/dummy/images/10.jpg",
+    "name": "33 слова о дизайне",
+    "isSaved": false,
+    "duration": 175
+  },
+  {
+    "image": "/dummy/images/11.jpg",
+    "name": "33 слова о дизайне",
+    "isSaved": true,
+    "duration": 80
+  },
+  {
+    "image": "/dummy/images/12.jpg",
+    "name": "33 слова о дизайне",
+    "isSaved": false,
+    "duration": 150
+  },
+  {
+    "image": "/dummy/images/13.jpg",
+    "name": "33 слова о дизайне",
+    "isSaved": true,
+    "duration": 115
+  },
+  {
+    "image": "/dummy/images/14.jpg",
+    "name": "33 слова о дизайне",
+    "isSaved": false,
+    "duration": 90
+  },
+  {
+    "image": "/dummy/images/15.jpg",
+    "name": "33 слова о дизайне",
+    "isSaved": true,
+    "duration": 140
+  },
+  {
+    "image": "/dummy/images/16.jpg",
+    "name": "33 слова о дизайне",
+    "isSaved": false,
+    "duration": 120
+  }
+]

@@ -1,0 +1,143 @@
+.register {
+  text-align: left;
+  padding-top: 70px;
+  max-width: 396px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.register__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: calc(100vh - 319px);
+}
+
+.register__heading {
+  margin: 40px 0;
+  padding: 0;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.register__button {
+  padding: 0;
+  /* margin: 69px 0 0; */
+  background-color: #4285f4;
+  width: 100%;
+  height: 45px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 3px;
+}
+
+.register__label {
+  margin: 0;
+  padding: 0 0 10px 0;
+  display: block;
+  color: #8b8b8b;
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.register__fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.register__field {
+  box-sizing: border-box;
+  margin: 0 0 20px 0;
+  padding: 15px;
+  width: 100%;
+  height: 46px;
+  background-color: #2f2f2f;
+  border-radius: 8px;
+  border: 0;
+  outline: none;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  transition: all 0.3s ease-in-out;
+}
+
+.register__field:focus {
+  outline: 1px #b6b6b6 solid;
+  outline-offset: 1px;
+  border-radius: 8px;
+}
+
+.register__field_error {
+  margin: 0 auto 10px;
+  color: #ee3465;
+}
+.register__field_error:focus {
+  outline: 1px #ee3465 solid;
+}
+.error-message {
+  display: block;
+  margin: 0;
+  padding: 0;
+  color: #ee3465;
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.register__message {
+  margin: 16px 0 0;
+  padding: 0;
+  color: #8b8b8b;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.register__link {
+  color: #4285f4;
+  text-decoration: none;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 600px) {
+  .register {
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 56px;
+  }
+  .register__button {
+    font-size: 12px;
+  }
+
+  .register__heading {
+    margin-top: 46px;
+    margin-bottom: 80px;
+  }
+
+  .register__label {
+    text-align: left;
+  }
+
+  .register__container {
+    margin: 0 auto 30px;
+    text-align: center;
+    max-width: calc(100% - 60px);
+  }
+  .register__message {
+    font-size: 12px;
+  }
+  .register__link {
+    font-size: 12px;
+  }
+  .error-message {
+    text-align: left;
+  }
+  .register__form {
+    min-height: calc(100vh - 310px);
+  }
+}

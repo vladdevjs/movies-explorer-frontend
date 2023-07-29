@@ -1,0 +1,151 @@
+.about-project {
+  padding: 110px 0;
+  background-color: #202020;
+  color: #fff;
+}
+
+.about-project__text-container {
+  margin-top: 70px;
+  display: flex;
+  gap: 55px;
+  text-align: left;
+}
+
+.about-project__text-block {
+  margin-bottom: 111px;
+}
+
+.about-project__text-heading {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: -0.8px;
+}
+
+.about-project__text-message {
+  margin: 26px 0 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.about-project__timeline {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about-project__timeline-one {
+  margin-bottom: 14px;
+  height: 36px;
+  flex-basis: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3ddc84;
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.about-project__timeline-four {
+  margin-bottom: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 80%;
+  height: 36px;
+  background-color: #303030;
+  font-size: 14px;
+  font-weight: 400;
+  height: 35px;
+}
+.about-project__timeline-one-caption {
+  color: #8b8b8b;
+  flex-basis: 20%;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+}
+
+.about-project__timeline-four-caption {
+  color: #8b8b8b;
+  flex-basis: 80%;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+}
+@media screen and (max-width: 1200px) {
+  .about-project {
+    padding: 90px 0;
+  }
+  .about-project__text-block {
+    margin-bottom: 96px;
+  }
+  .about-project__text-message {
+    margin: 21px 0 0;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .about-project__text-container {
+    gap: 35px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about-project {
+    padding: 67px 0 70px;
+  }
+
+  .about-project__text-container {
+    flex-direction: column;
+    margin-top: 64px;
+    margin-bottom: 40px;
+  }
+  .about-project__text-heading {
+    width: auto;
+    margin: 0 4px 16px;
+    font-size: 18px;
+    letter-spacing: -0.72px;
+  }
+  .about-project__text-message {
+    width: auto;
+    margin: 0 4px;
+    font-size: 11px;
+    line-height: 16px;
+  }
+  .about-project__text-block {
+    margin-bottom: 24px;
+  }
+  .about-project__text-block:last-child {
+    margin-bottom: 20px;
+  }
+  .about-project__timeline {
+    margin: 0 4px;
+    width: auto;
+    row-gap: 6px;
+  }
+  .about-project__timeline-one {
+    font-size: 11px;
+    flex-basis: 35%;
+    margin: 0;
+  }
+  .about-project__timeline-four {
+    font-size: 11px;
+    flex-basis: 65%;
+    margin: 0;
+  }
+  .about-project__timeline-one-caption {
+    font-size: 11px;
+    flex-basis: 35%;
+  }
+  .about-project__timeline-four-caption {
+    font-size: 11px;
+    flex-basis: 65%;
+  }
+}
