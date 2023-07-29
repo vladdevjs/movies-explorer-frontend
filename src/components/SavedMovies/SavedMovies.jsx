@@ -10,9 +10,9 @@ import dummyData from '../../dummy/dummyData-saved.json';
 function SavedMovies() {
   return (
     <>
-      <Header mode={'dark'} />
-      <SearchForm />
+      <Header mode={'dark'} />{' '}
       <main className='saved-movies'>
+        <SearchForm />
         <MoviesCardList dummyData={dummyData} />
       </main>
       <Footer />
