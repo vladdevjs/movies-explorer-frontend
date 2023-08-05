@@ -9,9 +9,10 @@
   background-size: 38px;
   background-repeat: no-repeat;
   background-position: center;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, transform 1s ease-in;
 }
 
 .logo:hover {
   opacity: 0.8;
+  transform: rotate(360deg);
 }

@@ -60,7 +60,13 @@ input::placeholder {
   background-size: 34px;
   outline: none;
   border: none;
+  border-radius: 50%;
   background-repeat: no-repeat;
+  transition: 0.2s ease;
+}
+
+.searchForm__button:hover {
+  background-size: 44px;
 }
 
 @media screen and (max-width: 1200px) {
