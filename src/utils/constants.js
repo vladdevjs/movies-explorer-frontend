@@ -1,4 +1,4 @@
-const MAIN_API_BASE_URL = 'api.vladmovies.nomoredomains.xyz';
+const MAIN_API_BASE_URL = 'https://api.vladmovies.nomoredomains.xyz';
 const MOVIE_API_BASE_URL = 'https://api.nomoreparties.co';
 
 const SHORT_FILM_DURATION = 40;
