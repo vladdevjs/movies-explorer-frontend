@@ -1,5 +1,5 @@
-// const MAIN_API_BASE_URL = 'https://api.vladmovies.nomoredomains.xyz';
-const MAIN_API_BASE_URL = 'http://localhost:3000';
+const MAIN_API_BASE_URL = 'https://api.vladmovies.nomoredomains.xyz';
+// const MAIN_API_BASE_URL = 'http://localhost:3000';
 const MOVIE_API_BASE_URL = 'https://api.nomoreparties.co';
 
 const SHORT_FILM_DURATION = 40;
