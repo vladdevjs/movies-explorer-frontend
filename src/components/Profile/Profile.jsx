@@ -29,23 +29,22 @@ function Profile({ onSignOut, onChangeUserInfo, errorMessage, setErrorAuthMessag
   const handleChangeInput = (e) => {
     setErrorAuthMessage('');
     handleChange(e);
+    const updatedName = e.target.name === 'name' && e.target.value;
+    const updatedEmail = e.target.name === 'email' && e.target.value;
+    if (updatedName === currentUser?.name || updatedEmail === currentUser?.email) {
+      setErrorAuthMessage(DATA_NOT_CHANGED_ERROR);
+    }
   };
 
   const handleEditClick = () => setIsEditing(true);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const updatedName = values.name || name;
-    const updatedEmail = values.email || email;
-    if (updatedName !== currentUser?.name || updatedEmail !== currentUser?.email) {
-      onChangeUserInfo({
-        name: values.name || name,
-        email: values.email || email,
-      });
-      setIsEditing(false);
-    } else {
-      setErrorAuthMessage(DATA_NOT_CHANGED_ERROR);
-    }
+    onChangeUserInfo({
+      name: values.name || name,
+      email: values.email || email,
+    });
+    setIsEditing(false);
   };
 
   return (
