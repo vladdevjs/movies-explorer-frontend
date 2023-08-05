@@ -1,7 +1,7 @@
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { CurrentUserContext } from '../../contexts/CurrentUserContext';
-import ProtectedRouteElement from '../../utils/ProtectedRoute';
+import { AuthElement, ProtectedRouteElement } from '../../utils/ProtectedRoute';
 import { useApiErrorHandling } from '../../utils/useApiErrorHandling';
 import * as auth from '../../utils/auth';
 import mainApi from '../../utils/MainApi';
@@ -111,7 +111,8 @@ function App() {
           <Route
             path='/signup'
             element={
-              <Register
+              <AuthElement
+                element={Register}
                 onSignUp={handleSignUp}
                 errorMessage={errorAuthMessage}
                 setErrorAuthMessage={setErrorAuthMessage}
@@ -121,7 +122,8 @@ function App() {
           <Route
             path='/signin'
             element={
-              <Login
+              <AuthElement
+                element={Login}
                 onSignIn={handleSignIn}
                 errorMessage={errorAuthMessage}
                 setErrorAuthMessage={setErrorAuthMessage}

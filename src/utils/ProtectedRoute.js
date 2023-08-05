@@ -7,4 +7,9 @@ const ProtectedRouteElement = ({ element: Component, ...props }) => {
   return loggedIn ? <Component {...props} /> : <Navigate to='/' replace />;
 };
 
-export default ProtectedRouteElement;
+const AuthElement = ({ element: Component, ...props }) => {
+  const { loggedIn } = useContext(CurrentUserContext);
+  return !loggedIn ? <Component {...props} /> : <Navigate to='/movies' replace />;
+};
+
+export { ProtectedRouteElement, AuthElement };
