@@ -4,7 +4,7 @@ import { CurrentUserContext } from '../contexts/CurrentUserContext';
 
 const ProtectedRouteElement = ({ element: Component, ...props }) => {
   const { loggedIn } = useContext(CurrentUserContext);
-  return loggedIn ? <Component {...props} /> : <Navigate to='/signin' replace />;
+  return loggedIn ? <Component {...props} /> : <Navigate to='/' replace />;
 };
 
 export default ProtectedRouteElement;
