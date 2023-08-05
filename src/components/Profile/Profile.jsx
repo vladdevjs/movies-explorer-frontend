@@ -26,6 +26,13 @@ function Profile({ onSignOut, onChangeUserInfo, errorMessage, setErrorAuthMessag
     }
   }, [errorMessage]);
 
+  useEffect(() => {
+    return () => {
+      setErrorAuthMessage('');
+      setIsEditing(false);
+    };
+  }, [setErrorAuthMessage]);
+
   const handleChangeInput = (e) => {
     setErrorAuthMessage('');
     handleChange(e);
