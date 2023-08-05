@@ -1,10 +1,10 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './NotFound.css';
 
 function NotFound() {
   const navigate = useNavigate();
   const handleGoBack = () => {
-    if (navigate.length > 2) {
+    if (navigate.length >= 2) {
       navigate(-1);
     } else {
       navigate('/');
