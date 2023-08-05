@@ -4,6 +4,8 @@ const MOVIE_API_BASE_URL = 'https://api.nomoreparties.co';
 
 const SHORT_FILM_DURATION = 40;
 
+const EDIT_PROFILE_SUCCESS_MESSAGE = 'Данные успешно отредактированы!';
+
 const EMAIL_EXISTS_ERROR = 'Пользователь с таким email уже существует';
 const UPDATE_PROFILE_ERROR = 'При обновлении профиля произошла ошибка';
 const REGISTER_ERROR = 'При регистрации пользователя произошла ошибка';
@@ -33,4 +35,5 @@ export {
   DATA_NOT_CHANGED_ERROR,
   NOT_FOUND_ERROR,
   SERVER_ERROR,
+  EDIT_PROFILE_SUCCESS_MESSAGE,
 };

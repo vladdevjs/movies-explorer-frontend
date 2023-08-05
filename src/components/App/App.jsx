@@ -3,8 +3,11 @@ import { useState, useEffect } from 'react';
 import { CurrentUserContext } from '../../contexts/CurrentUserContext';
 import { AuthElement, ProtectedRouteElement } from '../../utils/ProtectedRoute';
 import { useApiErrorHandling } from '../../utils/useApiErrorHandling';
+import { useInfoMessageHandling } from '../../utils/useInfoMessageHandling';
 import * as auth from '../../utils/auth';
 import mainApi from '../../utils/MainApi';
+
+import { EDIT_PROFILE_SUCCESS_MESSAGE } from '../../utils/constants';
 
 import Main from '../Main/Main';
 import Movies from '../Movies/Movies';
@@ -14,6 +17,7 @@ import Login from '../Login/Login';
 import Profile from '../Profile/Profile';
 import NotFound from '../NotFound/NotFound';
 import ErrorPopup from '../ErrorPopup/ErrorPopup';
+import InfoPopup from '../InfoPopup/InfoPopup';
 
 import './App.css';
 
@@ -23,6 +27,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [errorAuthMessage, setErrorAuthMessage] = useState('');
   const [errorApiMessage, showApiError] = useApiErrorHandling();
+  const [infoMessage, showInfoMessage] = useInfoMessageHandling();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -87,6 +92,8 @@ function App() {
       .changeUserInfo(newUserInfo)
       .then((updatedUser) => {
         setCurrentUser(updatedUser);
+        console.log('успешно');
+        showInfoMessage(EDIT_PROFILE_SUCCESS_MESSAGE);
       })
       .catch((err) => {
         setErrorAuthMessage(err);
@@ -161,6 +168,7 @@ function App() {
           <Route path='*' element={<NotFound />} />
         </Routes>
         <ErrorPopup errorMessage={errorApiMessage} />
+        <InfoPopup infoMessage={infoMessage} />
       </div>
     </CurrentUserContext.Provider>
   );
