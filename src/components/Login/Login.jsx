@@ -41,6 +41,8 @@ function Login({ onSignIn, errorMessage, setErrorAuthMessage }) {
               required
               className={`login__field ${errors.email && 'login__field_error'}`}
               value={values.email || ''}
+              pattern='^\S+@\S+\.\S+$'
+              title='Некорректный формат почты'
               onChange={handleChangeInput}
             />
             <span className='login__error-message'>{errors.email}</span>

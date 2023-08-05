@@ -56,6 +56,8 @@ function Register({ onSignUp, errorMessage, setErrorAuthMessage }) {
               minLength='2'
               required
               className={`register__field ${errors.email && 'register__field_error'}`}
+              pattern='^\S+@\S+\.\S+$'
+              title='Некорректный формат почты'
               onChange={handleChangeInput}
             />
             <span className='register__error-message'>{errors.email}</span>

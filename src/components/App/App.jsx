@@ -92,7 +92,6 @@ function App() {
       .changeUserInfo(newUserInfo)
       .then((updatedUser) => {
         setCurrentUser(updatedUser);
-        console.log('успешно');
         showInfoMessage(EDIT_PROFILE_SUCCESS_MESSAGE);
       })
       .catch((err) => {

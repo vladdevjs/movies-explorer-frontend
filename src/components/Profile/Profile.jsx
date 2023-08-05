@@ -94,6 +94,8 @@ function Profile({ onSignOut, onChangeUserInfo, errorMessage, setErrorAuthMessag
                   value={values.email || email}
                   className={`profile__field-email ${errors.email && 'profile__field-email_error'}`}
                   onChange={handleChangeInput}
+                  pattern='^\S+@\S+\.\S+$'
+                  title='Некорректный формат почты'
                 />
                 <span className='profile__error-message'>{errors.email}</span>
               </div>
