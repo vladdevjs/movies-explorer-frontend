@@ -38,7 +38,7 @@ function Profile({ onSignOut, onChangeUserInfo, errorMessage, setErrorAuthMessag
     handleChange(e);
     const updatedName = e.target.name === 'name' ? e.target.value : values.name;
     const updatedEmail = e.target.name === 'email' ? e.target.value : values.email;
-    if (updatedName === currentUser?.name || updatedEmail === currentUser?.email) {
+    if (updatedName === currentUser?.name && updatedEmail === currentUser?.email) {
       setErrorAuthMessage(DATA_NOT_CHANGED_ERROR);
     }
   };
