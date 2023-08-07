@@ -9,10 +9,22 @@ function Footer() {
         <div className='footer__bottom-line'>
           <div className='footer__timestamp'>&copy; {date.getFullYear()}</div>
           <div className='footer__links'>
-            <a className='link footer__link' href='https://practicum.yandex.ru' target='_blank' rel='noreferrer' aria-label='Перейти на официальный сайт Яндекс Практикума'>
+            <a
+              className='link footer__link'
+              href='https://practicum.yandex.ru'
+              target='_blank'
+              rel='noreferrer'
+              aria-label='Перейти на официальный сайт Яндекс Практикума'
+            >
               Яндекс.Практикум
             </a>
-            <a className='link footer__link' href='https://github.com/vladdevjs' target='_blank' rel='noreferrer' aria-label='Перейти на страницу студента в GitHub'>
+            <a
+              className='link footer__link'
+              href='https://github.com/vladdevjs'
+              target='_blank'
+              rel='noreferrer'
+              aria-label='Перейти на страницу студента в GitHub'
+            >
               Github
             </a>
           </div>

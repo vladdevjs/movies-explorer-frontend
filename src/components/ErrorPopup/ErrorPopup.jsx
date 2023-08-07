@@ -1,7 +1,7 @@
 import errorImage from '../../images/error.svg';
 import './ErrorPopup.css';
 
-const ErrorMessage = ({ errorMessage }) => {
+const ErrorPopup = ({ errorMessage }) => {
   return (
     <>
       {errorMessage && (
@@ -14,4 +14,4 @@ const ErrorMessage = ({ errorMessage }) => {
   );
 };
 
-export default ErrorMessage;
+export default ErrorPopup;

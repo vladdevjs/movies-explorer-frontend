@@ -1,21 +1,21 @@
-import { useLocation } from 'react-router-dom';
-import Logo from '../Logo/Logo';
+import { useContext } from 'react';
+import { CurrentUserContext } from '../../contexts/CurrentUserContext';
+
 import Navigation from '../Navigation/Navigation';
 import NavTab from '../NavTab/NavTab';
-import { authPages } from '../../utils/constants';
 
+import Logo from '../Logo/Logo';
 import './Header.css';
 
-function Header({ mode }) {
-  const location = useLocation();
-  const isAuthPage = authPages.includes(location.pathname);
-  const headerClass = mode === 'dark' ? 'header header_mode_dark' : 'header';
+function Header({ dark }) {
+  const { loggedIn } = useContext(CurrentUserContext);
+  const headerClass = dark ? 'header header_mode_dark' : 'header';
   return (
     <header className={headerClass}>
       <div className='header__container'>
         <div className='header__top-line'>
           <Logo />
-          {isAuthPage ? <Navigation /> : <NavTab />}
+          {loggedIn ? <Navigation /> : <NavTab />}
         </div>
       </div>
     </header>

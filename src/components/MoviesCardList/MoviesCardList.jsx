@@ -1,42 +1,20 @@
-import { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom'; // Импортируем хук useLocation
-
 import MoviesCard from '../MoviesCard/MoviesCard';
 import Preloader from '../Preloader/Preloader';
 import './MoviesCardList.css';
 
-function MoviesCardList({ dummyData }) {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  const location = useLocation();
-  const isOnMoviesPage = location.pathname === '/movies';
-
+function MoviesCardList({ movies, searchError, isLoading, noResults, onSave, onDelete }) {
   return (
     <section className='movies' aria-label='Карточки фильмов'>
       <div className='movies__container'>
-        {isLoading ? (
-          <Preloader />
-        ) : (
-          <>
-            <ul className='movies__list'>
-              {dummyData.map((movie, index) => (
-                <MoviesCard key={index} movie={movie} />
-              ))}
-            </ul>
-            {isOnMoviesPage && (
-              <button className='button movies__button-more' arial-label='Подгрузить ещё фильмы'>
-                Ещё
-              </button>
-            )}
-          </>
+        {isLoading && <Preloader />}
+        {searchError && <p className='movies__search-error'>Нужно ввести ключевое слово 😣</p>}
+        {noResults && !searchError && <p className='movies__not-found'>Ничего не найдено 🥺</p>}
+        {!isLoading && !searchError && !noResults && (
+          <ul className='movies__list'>
+            {movies.map((movie) => (
+              <MoviesCard key={movie.id || movie.movieId} movie={movie} onSave={onSave} onDelete={onDelete} />
+            ))}
+          </ul>
         )}
       </div>
     </section>

@@ -1,10 +1,10 @@
-.error-popup {
+.info-popup {
   color: #fff;
   position: fixed;
   top: 10px;
   right: 10px;
   max-width: 50%;
-  background: #ee3465;
+  background: #2be080;
   display: flex;
   justify-content: left;
   padding: 10px;
@@ -13,11 +13,11 @@
   border-radius: 0.5rem;
   transition: opacity 2s ease;
 }
-.error-popup__image {
+.info-popup__image {
   width: 20px;
 }
 
-.error-popup__message {
+.info-popup__message {
   margin: 0;
   padding: 0;
   font-size: 0.8em;
