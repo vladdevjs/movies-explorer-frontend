@@ -164,20 +164,22 @@ function Movies({ showError, onDelete }) {
         >
           <FilterCheckbox onCheckboxChange={handleShortFilmChange} isShortFilmChecked={isShortFilmChecked} />
         </SearchForm>
-        <MoviesCardList
-          movies={moviesToShow}
-          searchError={searchError}
-          noResults={noResults}
-          isLoading={isLoading}
-          onSave={handleSaveButtonClick}
-          onDelete={handleDelete}
-        />
+        <section className='movies' aria-label='Карточки фильмов'>
+          <MoviesCardList
+            movies={moviesToShow}
+            searchError={searchError}
+            noResults={noResults}
+            isLoading={isLoading}
+            onSave={handleSaveButtonClick}
+            onDelete={handleDelete}
+          />
 
-        {filteredMovies.length > displayedMoviesCount && (
-          <button className='button movies__button-more' onClick={handleLoadMore} aria-label='Подгрузить ещё фильмы'>
-            Ещё
-          </button>
-        )}
+          {filteredMovies.length > displayedMoviesCount && (
+            <button className='button movies__button-more' onClick={handleLoadMore} aria-label='Подгрузить ещё фильмы'>
+              Ещё
+            </button>
+          )}
+        </section>
       </main>
       <Footer />
     </>
