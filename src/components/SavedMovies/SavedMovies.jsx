@@ -83,13 +83,15 @@ function SavedMovies({ onDelete, showError }) {
         >
           <FilterCheckbox onCheckboxChange={handleShortFilmChange} isShortFilmChecked={isShortFilmChecked} />
         </SearchForm>
-        <MoviesCardList
-          movies={filteredMovies}
-          isLoading={isLoading}
-          onDelete={handleDelete}
-          searchError={searchError}
-          noResults={noResults}
-        />
+        <section className='movies' aria-label='Карточки фильмов'>
+          <MoviesCardList
+            movies={filteredMovies}
+            isLoading={isLoading}
+            onDelete={handleDelete}
+            searchError={searchError}
+            noResults={noResults}
+          />
+        </section>
       </main>
       <Footer />
     </>
