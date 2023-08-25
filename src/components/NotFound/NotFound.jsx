@@ -4,7 +4,11 @@ import './NotFound.css';
 function NotFound() {
   const navigate = useNavigate();
   const handleGoBack = () => {
-    navigate(-1) || navigate('/');
+    if (navigate.length > 2) {
+      navigate(-1);
+    } else {
+      navigate('/');
+    }
   };
   return (
     <main className='notFound'>
