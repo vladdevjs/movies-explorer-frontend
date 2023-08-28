@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from 'react';
+import { useState, useEffect, useContext, useRef } from 'react';
 import { useFormWithValidation } from '../../utils/useFormWithValidation';
 import { CurrentUserContext } from '../../contexts/CurrentUserContext';
 
@@ -14,6 +14,9 @@ function Profile({ onSignOut, onChangeUserInfo, errorMessage, setErrorAuthMessag
   const [email, setEmail] = useState(null);
   const { currentUser, isLoading } = useContext(CurrentUserContext);
   const { values, handleChange, errors, isValid } = useFormWithValidation();
+
+  const prevNameRef = useRef(name);
+  const prevEmailRef = useRef(email);
 
   useEffect(() => {
     setName(currentUser?.name);
@@ -36,9 +39,7 @@ function Profile({ onSignOut, onChangeUserInfo, errorMessage, setErrorAuthMessag
   const handleChangeInput = (e) => {
     setErrorAuthMessage('');
     handleChange(e);
-    const updatedName = e.target.name === 'name' ? e.target.value : values.name;
-    const updatedEmail = e.target.name === 'email' ? e.target.value : values.email;
-    if (updatedName === currentUser?.name && updatedEmail === currentUser?.email) {
+    if (prevNameRef.current.value === currentUser?.name && prevEmailRef.current.value === currentUser?.email) {
       setErrorAuthMessage(DATA_NOT_CHANGED_ERROR);
     }
   };
@@ -73,6 +74,7 @@ function Profile({ onSignOut, onChangeUserInfo, errorMessage, setErrorAuthMessag
                   pattern='^[A-Za-zА-Яа-я\s\-]+$'
                   title='Имя должно содержать только латиницу, кириллицу, пробел или дефис'
                   value={values.name || name}
+                  ref={prevNameRef}
                   className={`profile__field-name ${errors.name && 'profile__field-name_error'}`}
                   onChange={handleChangeInput}
                 />
@@ -92,6 +94,7 @@ function Profile({ onSignOut, onChangeUserInfo, errorMessage, setErrorAuthMessag
                   type='email'
                   name='email'
                   value={values.email || email}
+                  ref={prevEmailRef}
                   className={`profile__field-email ${errors.email && 'profile__field-email_error'}`}
                   onChange={handleChangeInput}
                   pattern='^\S+@\S+\.\S+$'
