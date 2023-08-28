@@ -13,7 +13,7 @@ function Profile({ onSignOut, onChangeUserInfo, errorMessage, setErrorAuthMessag
   const [name, setName] = useState(null);
   const [email, setEmail] = useState(null);
   const { currentUser, isLoading } = useContext(CurrentUserContext);
-  const { values, handleChange, errors, isValid } = useFormWithValidation();
+  const { values, handleChange, errors, isValid, setIsValid } = useFormWithValidation();
 
   const prevNameRef = useRef(name);
   const prevEmailRef = useRef(email);
@@ -53,6 +53,7 @@ function Profile({ onSignOut, onChangeUserInfo, errorMessage, setErrorAuthMessag
       email: values.email || email,
     });
     setIsEditing(false);
+    setIsValid(false);
   };
 
   return (
