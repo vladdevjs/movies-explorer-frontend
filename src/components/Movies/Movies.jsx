@@ -86,7 +86,6 @@ function Movies({ showError, onDelete }) {
   }, [movies]);
 
   const handleSaveButtonClick = (movie) => {
-    setIsLoading(true);
     mainApi
       .addMovie(movie)
       .then((addedMovie) => {
@@ -104,25 +103,27 @@ function Movies({ showError, onDelete }) {
       })
       .catch((error) => {
         showError(error);
-      })
-      .finally(() => {
-        setIsLoading(false);
       });
   };
 
   function handleDelete(movieId) {
-    onDelete(movieId);
-    setMovies((prev) =>
-      prev.map((film) =>
-        film._id === movieId
-          ? {
-              ...film,
-              isSaved: false,
-              _id: null,
-            }
-          : film,
-      ),
-    );
+    onDelete(movieId)
+      .then(
+        setMovies((prev) =>
+          prev.map((film) =>
+            film._id === movieId
+              ? {
+                  ...film,
+                  isSaved: false,
+                  _id: null,
+                }
+              : film,
+          ),
+        ),
+      )
+      .catch((error) => {
+        showError(error);
+      });
   }
 
   const handleFilter = (check) => {
