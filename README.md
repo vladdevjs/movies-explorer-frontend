@@ -30,4 +30,4 @@
 
 Демо: [https://vladmovies.nomoreparties.co/](https://vladmovies.nomoreparties.co/)
 
-Сайт задеплоен на [SprintBox](https://sprintbox/s40436/prices)
+Сайт задеплоен на [SprintBox](https://sprintbox.ru/s40436/prices)
