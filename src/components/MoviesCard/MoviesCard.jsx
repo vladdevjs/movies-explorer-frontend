@@ -1,10 +1,14 @@
 import './MoviesCard.css';
+import { useContext } from 'react';
 import { useLocation } from 'react-router-dom';
 import { MOVIE_API_BASE_URL } from '../../utils/constants';
 import { convertDuration } from '../../utils/utils';
+import { CurrentUserContext } from '../../contexts/CurrentUserContext';
 
 function MoviesCard({ movie, onSave, onDelete }) {
   const location = useLocation();
+
+  const { isLoading } = useContext(CurrentUserContext);
 
   const handleSaveButtonClick = () => {
     if (movie.isSaved) {
@@ -41,6 +45,7 @@ function MoviesCard({ movie, onSave, onDelete }) {
             className={`button movie-card__save-button ${movie.isSaved ? 'movie-card__save-button_active' : ''}`}
             aria-label='Сохранить карточку фильма'
             onClick={handleSaveButtonClick}
+            disabled={isLoading}
           ></button>
         )}
         <p className='movie-card__duration'>{convertDuration(movie.duration)}</p>
