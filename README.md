@@ -28,4 +28,6 @@
 
 ## 🔗 Ссылка
 
-Сайт задеплоен на [Yandex Cloud](https://vladmovies.nomoreparties.co/)
+Демо: [https://vladmovies.nomoreparties.co/](https://vladmovies.nomoreparties.co/)
+
+Сайт задеплоен на [SprintBox](https://sprintbox/s40436/prices)
