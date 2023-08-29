@@ -108,7 +108,7 @@ function Movies({ showError, onDelete }) {
 
   function handleDelete(movieId) {
     onDelete(movieId)
-      .then(
+      .then(() => {
         setMovies((prev) =>
           prev.map((film) =>
             film._id === movieId
@@ -119,8 +119,8 @@ function Movies({ showError, onDelete }) {
                 }
               : film,
           ),
-        ),
-      )
+        );
+      })
       .catch((error) => {
         showError(error);
       });
