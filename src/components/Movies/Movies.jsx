@@ -86,6 +86,7 @@ function Movies({ showError, onDelete }) {
   }, [movies]);
 
   const handleSaveButtonClick = (movie) => {
+    setIsLoading(true);
     mainApi
       .addMovie(movie)
       .then((addedMovie) => {
@@ -103,6 +104,9 @@ function Movies({ showError, onDelete }) {
       })
       .catch((error) => {
         showError(error);
+      })
+      .finally(() => {
+        setIsLoading(false);
       });
   };
 
